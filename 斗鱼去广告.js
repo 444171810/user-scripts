@@ -14,24 +14,25 @@
   //Mutation Event version
   function remvoeNodeFromContainerME(containerSelector, nodeSelector) {
     let node = document.querySelector(nodeSelector);
-    node?.remove();
+    node && node.remove();
 
     let container = document.querySelector(containerSelector);
-    container?.addEventListener('DOMNodeInserted', function () {
-      let node = container.querySelector(
-        `${containerSelector} ${nodeSelector}`
-      );
-      if (node) {
-        node.remove();
-      }
-    });
+    container &&
+      container.addEventListener('DOMNodeInserted', function () {
+        let node = container.querySelector(
+          `${containerSelector} ${nodeSelector}`
+        );
+        if (node) {
+          node.remove();
+        }
+      });
   }
 
   //Mutation Observer version
   function remvoeNodeFromContainerMO(containerSelector, nodeSelector) {
     //remove node initially
     const node = document.querySelector(`${containerSelector} ${nodeSelector}`);
-    node?.remove();
+    node && node.remove();
 
     const container = document.querySelector(containerSelector);
     const config = { childList: true, subtree: true };
@@ -53,7 +54,7 @@
 
   function removeNodeDirectly(selector) {
     const node = document.querySelector(selector);
-    node?.remove();
+    node && node.remove();
   }
 
   removeNodeDirectly('#js-room-activity');
