@@ -60,4 +60,6 @@
 
   removeNodeDirectly('#js-room-activity');
   remvoeNodeFromContainerMO('#js-player-video', '.ScreenBannerAd');
+  removeNodeDirectly('.RedEnvelopAd');
+  removeNodeDirectly('.AnchorPocketTips');
 })();
