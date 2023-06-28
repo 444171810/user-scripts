@@ -13,7 +13,7 @@
 (function () {
   'use strict';
   //Mutation Event version
-  function remvoeNodeFromContainerME(containerSelector, nodeSelector) {
+  function removeNodeFromContainerME(containerSelector, nodeSelector) {
     let node = document.querySelector(nodeSelector);
     node && node.remove();
 
@@ -30,7 +30,7 @@
   }
 
   //Mutation Observer version
-  function remvoeNodeFromContainerMO(containerSelector, nodeSelector) {
+  function removeNodeFromContainerMO(containerSelector, nodeSelector) {
     //remove node initially
     const node = document.querySelector(`${containerSelector} ${nodeSelector}`);
     node && node.remove();
@@ -59,7 +59,7 @@
   }
 
   removeNodeDirectly('#js-room-activity');
-  remvoeNodeFromContainerMO('#js-player-video', '.ScreenBannerAd');
+  removeNodeFromContainerMO('#js-player-video', '.ScreenBannerAd');
   removeNodeDirectly('.RedEnvelopAd');
-  removeNodeDirectly('.AnchorPocketTips');
+  removeNodeFromContainerMO('.layout-Player-toolbar', '.AnchorPocketTips');
 })();
