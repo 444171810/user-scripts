@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         斗鱼去广告Style
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1.0
 // @description  去除部分斗鱼播放器广告
 // @author       You
 // @match        https://www.douyu.com/*
