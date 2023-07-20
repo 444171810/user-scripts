@@ -30,11 +30,6 @@
    ${selectors.join(', ')}{
       display:none !important;
     }
-
-    .layout-Player-toolbar{
-      height: auto;
-      padding-bottom: 15px;
-    }
   `;
   GM_addStyle(css);
   // Your code here...
